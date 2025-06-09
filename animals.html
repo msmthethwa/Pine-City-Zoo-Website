@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Pine City Zoo Animals</title>
+</head>
+<body>
+    <div id="sidebar">
+        <img src="images/logo.png" alt="Pine City Zoo Logo"/>
+        <nav>
+            <a href="animals.html" class="active">Animals</a>
+            <a href="index.html">Map</a>
+            <a href="places.html">Places</a>
+            <a href="weather.html">Weather</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </div>
+    <div id="main-content">
+        <div class="map-card">
+            <h2>Our Animals</h2>
+            <div class="animal-list">
+                <a href="animals/elephants.html" class="animal-card">
+                    <img src="images/elephant.jpg" alt="Elephant" />
+                    <h3>Elephant</h3>
+                    <p>Gentle giants of the jungle</p>
+                </a>
+                <a href="animals/lions.html" class="animal-card">
+                    <img src="images/lion.jpg" alt="Lion" />
+                    <h3>Lion</h3>
+                    <p>The king of the jungle awaits your visit</p>
+                </a>
+                <a href="animals/giraffes.html" class="animal-card">
+                    <img src="images/giraffe-large.jpg" alt="Giraffe" />
+                    <h3>Giraffe</h3>
+                    <p>Our giraffes love company</p>
+                </a>
+                <a href="animals/koalas.html" class="animal-card">
+                    <img src="images/koala.jpg" alt="Koala" />
+                    <h3>Koala</h3>
+                    <p>Come take a look at the cute koalas</p>
+                </a>
+                <a href="animals/monkeys.html" class="animal-card">
+                    <img src="images/monkey.jpg" alt="Monkey" />
+                    <h3>Monkey</h3>
+                    <p>Playful monkeys are cleverer than you think</p>
+                </a>
+                <a href="animals/pandas.html" class="animal-card">
+                    <img src="images/panda.jpg" alt="Panda" />
+                    <h3>Panda</h3>
+                    <p>The pandas seem to be everyone's favorite</p>
+                </a>
+                <a href="animals/gemsbok.html" class="animal-card">
+                    <img src="images/gemsbok.jpg" alt="Gemsbok" />
+                    <h3>Gemsbok</h3>
+                    <p>Come and see the majestic Gemsbok</p>
+                </a>
+                <a href="animals/gorilla.html" class="animal-card">
+                    <img src="images/gorilla.jpg" alt="Gorilla" />
+                    <h3>Gorilla</h3>
+                    <p>Kong the gorilla is much friendlier than he looks</p>
+                </a>
+                <a href="animals/warthog.html" class="animal-card">
+                    <img src="images/warthog.jpg" alt="Warthog" />
+                    <h3>Warthog</h3>
+                    <p>Find out more about this funny-looking fellow</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Animal Cards */
+        .animal-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .animal-card {
+            background: #f7fafc;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(26,60,64,0.06);
+            padding: 18px 16px;
+            width: 210px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.18s;
+        }
+        .animal-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(26,60,64,0.13);
+        }
+        .animal-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        .animal-card h3 {
+            margin: 8px 0 4px 0;
+            color: #1a3c40;
+            font-size: 1.2em;
+        }
+        .animal-card p {
+            margin: 0;
+            color: #444;
+            font-size: 0.98em;
+            text-align: center;
+        }
+        .animal-card {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</body>
+</html>

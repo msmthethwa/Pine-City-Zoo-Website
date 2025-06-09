@@ -1,0 +1,338 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    color: #222;
+    min-height: 100vh;
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    width:100%;
+    height:80px;
+    background-image: url('images/wood-bg.png');
+    background-repeat: repeat-x;
+}
+#header img{
+    display: block;
+    margin: auto;
+    height: 70%;
+    padding-top: 15px;
+}
+#tabs-top{
+    position: fixed;
+    top     : 80px;
+    left    : 0;
+    z-index : 500;
+    width   : 100%;
+    height  : 40px;
+    background-color: darkgreen;
+    overflow: hidden;
+}
+#tabs-top a{
+    float   : left;
+    display : block;
+    width   : 33%;
+    height  :35px;
+    font-weight : 700;
+    color       : white;
+    text-align  : center;
+    text-decoration : none;
+    padding-top     : 12px;  
+}
+#main-home{
+    margin-top: 120px;
+}
+#tabs-bottom{
+    position : fixed;
+    bottom   : 0;
+    left     : 0;
+    z-index  : 500;
+    width    : 100%;
+    height   : 40px;
+    background-color: forestgreen;
+}
+#tabs-bottom a{
+        float : left;
+        display : block;
+        width : 50%;
+        height : 35px;
+        font-weight : 700;
+        color       : white;
+        text-align  : center;
+        text-decoration : none;
+        padding-top     : none;
+}
+
+/* Animals page main section */
+
+#main{
+    margin-top: 119px;
+    background: url('images/map-blur.png');
+    background-repeat: repeat-y;
+}
+#content{
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+a.info-box{
+    text-decoration : none;
+    background      : rgba(255 ,225, 255, .8);
+    width           : 90%;
+    height          : 90px;
+    display         : block;
+    margin          : auto;
+    margin-top      : 12px;
+    padding         : 1px;
+}
+
+.info-box img{
+    height : 70px;
+    margin : 10px;
+    float  : left;
+}
+.info-box h3{
+    padding : 0;
+    margin-bottom :0;
+    width : 90%;
+    color : #572800;
+}
+.info-box p{
+    margin  : 0;
+    padding : 0;
+    width   : 90%;
+    color   : 131313;
+}
+.info-box img.right{
+    float      : right;
+    margin-top : 25px;
+    height     : 40px;
+}
+
+/* Elephant page main section */
+
+#info-box-full{
+    background-color : rgba(255, 255, 255, .8) ;
+    width   : 90%;
+    display : block;
+    margin  : auto;
+    margin-top : 12px;
+    padding    : 10px;
+}
+#info-box-full img{
+    width : 100%;
+}
+#info-box-full h3{
+    text-align : center;
+}
+
+
+/** Weather page **/
+
+img.info-box-weather-icon{
+    height : auto;
+    max-width: 30px;
+    margin : 10px;
+    float  : left;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+img.info-box-weather-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    img.info-box-weather-icon {
+        max-width: 20px;
+        margin: 5px;
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+h1.info-box-weather-icon{
+    font-size  : 65px;
+    font-weight: 200;
+    padding    : 0;
+    margin     : 0;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    border-top: 1px solid #131313;
+}
+
+
+/* Feedback page */
+
+input {
+  width: 100%;
+  height: 25px;
+  margin: 12px 0;
+  border: 1px solid #929292;
+}
+
+textarea {
+  width: 100%;
+  height: 25px;
+  margin: 12px 0;
+  border: 1px solid #929292;
+}
+
+.button {
+  display: block;
+  background-color: forestgreen;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0;
+  padding: 8px 0;
+}
+
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background: #1a3c40;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.07);
+    z-index: 100;
+}
+
+#sidebar img {
+    width: 90px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+#sidebar nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#sidebar nav a {
+    color: #e0eafc;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 12px 30px;
+    border-radius: 30px 0 0 30px;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: 1px;
+}
+
+#sidebar nav a.active,
+#sidebar nav a:hover {
+    background: #e0eafc;
+    color: #1a3c40;
+    font-weight: bold;
+}
+
+/* Main Content */
+#main-content {
+    margin-left: 240px;
+    padding: 40px 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Map Card */
+.map-card {
+    background: #fff;
+    border-radius: 22px;
+    box-shadow: 0 4px 24px rgba(26,60,64,0.10);
+    padding: 32px 32px 24px 32px;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map-card img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(26,60,64,0.07);
+    margin-bottom: 12px;
+}
+
+.map-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 2em;
+    color: #1a3c40;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    #sidebar {
+        width: 70px;
+        padding-top: 20px;
+    }
+    #sidebar img {
+        width: 50px;
+        margin-bottom: 10px;
+    }
+    #sidebar nav a {
+        font-size: 0.9em;
+        padding: 10px 10px;
+        border-radius: 20px 0 0 20px;
+        text-align: center;
+    }
+    #main-content {
+        margin-left: 80px;
+        padding: 20px 8px;
+    }
+    .map-card {
+        padding: 16px 8px 12px 8px;
+    }
+}
+
+.feedback-icon {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+    .feedback-icon {
+        max-width: 50px;
+    }
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Pine City Zoo Weather</title>
+    <style>
+        .weather-today, .weekly-forecast {
+            margin-top: 24px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .weather-today {
+            text-align: center;
+        }
+
+        .weather-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+        }
+        .day-card {
+            cursor: pointer;
+        }
+
+        .weather-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            justify-content: center;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        td {
+            padding: 8px 0;
+            color: #333;
+        }
+
+        .forecast-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .day-card {
+            background: #fff;
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .day-card img {
+            width: 50px;
+            margin-bottom: 8px;
+        }
+
+        .day-card h4 {
+            margin: 8px 0 4px;
+            font-size: 16px;
+            color: #1a3c40;
+        }
+
+        .day-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .forecast-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+                margin-top: 16px;
+            }
+            .day-card {
+                padding: 10px;
+            }
+            .day-card img {
+                width: 40px;
+                margin-bottom: 6px;
+            }
+            .day-card h4 {
+                font-size: 14px;
+                margin: 6px 0 2px;
+            }
+            .day-card p {
+                font-size: 12px;
+            }
+            .map-card.weekly-forecast {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <img src="images/logo.png" alt="Pine City Zoo Logo"/>
+        <nav>
+            <a href="animals.html">Animals</a>
+            <a href="index.html">Map</a>
+            <a href="places.html">Places</a>
+            <a href="weather.html" class="active">Weather</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </div>
+
+    <div id="main-content">
+        <div class="map-card weather-today">
+            <h2>Today's Weather</h2>
+            <div class="weather-row">
+                <img src="images/sunny.png" alt="Sunny" class="weather-icon">
+                <div>
+                    <h3 style="margin:0; color:#1a3c40;">24°C</h3>
+                    <p style="margin:0; color:#444;">Sunny, light breeze</p>
+                </div>
+            </div>
+            <hr style="margin: 24px 0; border: none; border-top: 1px solid #eee;">
+            <table>
+                <tbody>
+                    <tr><td>Morning</td><td>18°C, Clear</td></tr>
+                    <tr><td>Afternoon</td><td>24°C, Sunny</td></tr>
+                    <tr><td>Evening</td><td>20°C, Mild</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="map-card weekly-forecast">
+            <h2>7-Day Forecast</h2>
+            <div class="forecast-grid">
+                <div class="day-card" data-day="Monday">
+                    <img src="images/sunny.png" alt="Sunny">
+                    <h4>Monday</h4>
+                    <p>26°C / 18°C</p>
+                    <p>Sunny</p>
+                </div>
+                <div class="day-card" data-day="Tuesday">
+                    <img src="images/partly-cloudy.png" alt="Cloudy">
+                    <h4>Tuesday</h4>
+                    <p>22°C / 16°C</p>
+                    <p>Partly Cloudy</p>
+                </div>
+                <div class="day-card" data-day="Wednesday">
+                    <img src="images/rain.png" alt="Rainy">
+                    <h4>Wednesday</h4>
+                    <p>20°C / 15°C</p>
+                    <p>Showers</p>
+                </div>
+                <div class="day-card" data-day="Thursday">
+                    <img src="images/thunderstorm.png" alt="Thunderstorm">
+                    <h4>Thursday</h4>
+                    <p>21°C / 14°C</p>
+                    <p>Stormy</p>
+                </div>
+                <div class="day-card" data-day="Friday">
+                    <img src="images/cloud.png" alt="Cloudy">
+                    <h4>Friday</h4>
+                    <p>23°C / 17°C</p>
+                    <p>Cloudy</p>
+                </div>
+                <div class="day-card" data-day="Saturday">
+                    <img src="images/sunny.png" alt="Sunny">
+                    <h4>Saturday</h4>
+                    <p>27°C / 19°C</p>
+                    <p>Sunny</p>
+                </div>
+                <div class="day-card" data-day="Sunday">
+                    <img src="images/wind.png" alt="Windy">
+                    <h4>Sunday</h4>
+                    <p>25°C / 18°C</p>
+                    <p>Windy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Weather data for each day
+        const weatherData = {
+            Monday: {
+                icon: "images/sunny.png",
+                alt: "Sunny",
+                temp: "26°C",
+                description: "Sunny, light breeze",
+                details: {
+                    Morning: "20°C, Clear",
+                    Afternoon: "26°C, Sunny",
+                    Evening: "22°C, Mild"
+                }
+            },
+            Tuesday: {
+                icon: "images/partly-cloudy.png",
+                alt: "Partly Cloudy",
+                temp: "22°C",
+                description: "Partly Cloudy, mild breeze",
+                details: {
+                    Morning: "18°C, Cloudy",
+                    Afternoon: "22°C, Partly Cloudy",
+                    Evening: "19°C, Mild"
+                }
+            },
+            Wednesday: {
+                icon: "images/rain.png",
+                alt: "Rainy",
+                temp: "20°C",
+                description: "Showers, light rain",
+                details: {
+                    Morning: "17°C, Showers",
+                    Afternoon: "20°C, Rain",
+                    Evening: "18°C, Light rain"
+                }
+            },
+            Thursday: {
+                icon: "images/thunderstorm.png",
+                alt: "Thunderstorm",
+                temp: "21°C",
+                description: "Stormy, thunder showers",
+                details: {
+                    Morning: "19°C, Thunderstorms",
+                    Afternoon: "21°C, Stormy",
+                    Evening: "20°C, Thunder showers"
+                }
+            },
+            Friday: {
+                icon: "images/cloud.png",
+                alt: "Cloudy",
+                temp: "23°C",
+                description: "Cloudy, overcast",
+                details: {
+                    Morning: "20°C, Cloudy",
+                    Afternoon: "23°C, Overcast",
+                    Evening: "21°C, Cloudy"
+                }
+            },
+            Saturday: {
+                icon: "images/sunny.png",
+                alt: "Sunny",
+                temp: "27°C",
+                description: "Sunny, warm",
+                details: {
+                    Morning: "22°C, Clear",
+                    Afternoon: "27°C, Sunny",
+                    Evening: "24°C, Mild"
+                }
+            },
+            Sunday: {
+                icon: "images/wind.png",
+                alt: "Windy",
+                temp: "25°C",
+                description: "Windy, breezy",
+                details: {
+                    Morning: "21°C, Windy",
+                    Afternoon: "25°C, Breezy",
+                    Evening: "23°C, Mild wind"
+                }
+            }
+        };
+
+        // Function to update the weather-today section
+        function updateWeatherToday(day) {
+            const data = weatherData[day];
+            if (!data) return;
+
+            const weatherToday = document.querySelector('.weather-today');
+            const heading = weatherToday.querySelector('h2');
+            const icon = weatherToday.querySelector('.weather-icon');
+            const temp = weatherToday.querySelector('h3');
+            const description = weatherToday.querySelector('p');
+            const tableRows = weatherToday.querySelectorAll('table tr');
+
+            heading.textContent = `${day}'s Weather`;
+            icon.src = data.icon;
+            icon.alt = data.alt;
+            temp.textContent = data.temp;
+            description.textContent = data.description;
+
+            const details = data.details;
+            const times = Object.keys(details);
+            times.forEach((time, index) => {
+                if (tableRows[index]) {
+                    tableRows[index].children[0].textContent = time;
+                    tableRows[index].children[1].textContent = details[time];
+                }
+            });
+        }
+
+        // Add click event listeners to day-cards
+        document.querySelectorAll('.day-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const day = card.getAttribute('data-day');
+                updateWeatherToday(day);
+            });
+        });
+    </script>
+</body>
+</html>

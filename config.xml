@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:gap="http://phonegap.com/ns/1.0"
+        id="com.example.placeholderapp"
+        versionCode="1"
+        version="1.0.0">
+
+    <name>Pine City Zoo App</name>
+
+    <description>
+        The Pine City Zoo website features several pages for easy navigation and information. The homepage offers a zoo map, while the Animals page showcases various species with images and descriptions. The Places page highlights key locations within the zoo, such as the Amphitheatre and Wild Things Coffee Shop. The Weather page provides current weather updates and a 7-day forecast. The Feedback page allows visitors to submit their thoughts via a form. Additionally, there are detailed animal-specific pages, like the Elephant page, which offers in-depth information about individual species, and the Amphitheatre page, which lists show schedules and the venue's location. All pages include consistent sidebar navigation for a seamless user experience.
+    </description>
+
+    <author href="https://msmthethwa.github.io/MS-Mthethwa-Portfolio/" email="mbekezelimthethwa@gmail.com">
+        MS Mthethwa
+    </author>
+
+</widget>

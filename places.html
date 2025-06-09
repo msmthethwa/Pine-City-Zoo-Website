@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Pine City Zoo Places</title>
+</head>
+<body>
+    <div id="sidebar">
+        <img src="images/logo.png" alt="Pine City Zoo Logo"/>
+        <nav>
+            <a href="animals.html">Animals</a>
+            <a href="index.html">Map</a>
+            <a href="places.html" class="active">Places</a>
+            <a href="weather.html">Weather</a>
+            <a href="feedback.html">Feedback</a>
+        </nav>
+    </div>
+    <div id="main-content">
+        <div class="map-card">
+            <h2>Zoo Places</h2>
+            <div class="animal-list">
+                <a href="places/amphitheatre.html" class="animal-card">
+                    <img src="images/garden-amphitheater.jpg" alt="Amphitheatre" />
+                    <h3>Amphitheatre</h3>
+                    <p>Catch an educational and entertaining event.</p>
+                </a>
+                <a href="places/insect.html" class="animal-card">
+                    <img src="images/rhino-beetle.jpg" alt="Insect House" />
+                    <h3>Insect House</h3>
+                    <p>Creepy crawlies of every kind you can imagine!</p>
+                </a>
+                <a href="places/monkey.html" class="animal-card">
+                    <img src="images/monkey-trail.jpg" alt="Monkey Trail" />
+                    <h3>Monkey Trail</h3>
+                    <p>Take a walk or ride through this challenging obstacle course</p>
+                </a>
+                <a href="places/coffee-shop.html" class="animal-card">
+                    <img src="images/coffee-shop.jpg" alt="Wild Things Coffee Shop" />
+                    <h3>Wild Things Coffee Shop</h3>
+                    <p>Enjoy a cuppa or a dessert here.</p>
+                </a>
+                <a href="places/forest.html" class="animal-card">
+                    <img src="images/lost-forest.jpg" alt="Lost Forest" />
+                    <h3>Lost Forest</h3>
+                    <p>Relax and have a picnic under the trees by the lake.</p>
+                </a>
+                <a href="places/pizza.html" class="animal-card">
+                    <img src="images/mos-pizza.jpg" alt="Mo's Pizza" />
+                    <h3>Mo's Pizza</h3>
+                    <p>Scrumptious Pizzas and Pastas for the Family.</p>
+                </a>
+                <a href="places/dine.html" class="animal-card">
+                    <img src="images/khaoran-breeze-e1570972374418.webp" alt="Dine @ The Zoo" />
+                    <h3>Dine @ The Zoo</h3>
+                    <p>Enjoy gourmet meals in a serene outdoor setting.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <style>
+        /* Animal Cards */
+        .animal-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 28px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .animal-card {
+            background: #f7fafc;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(26,60,64,0.06);
+            padding: 18px 16px;
+            width: 210px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.18s;
+        }
+        .animal-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(26,60,64,0.13);
+        }
+        .animal-card img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        .animal-card h3 {
+            margin: 8px 0 4px 0;
+            color: #1a3c40;
+            font-size: 1.2em;
+        }
+        .animal-card p {
+            margin: 0;
+            color: #444;
+            font-size: 0.98em;
+            text-align: center;
+        }
+        .animal-card {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</body>
+</html>
